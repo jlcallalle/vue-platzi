@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Control de flujo directiva</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="app">
+    <input type="number" v-model="value"> <br>
+    <span> data simple: {{ value }}</span> <br>
+    <span> data doble {{ converteValue }}</span>
+  </div>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        name: 'Bitcoin',
+        value: 0,
+        price:2
+      },
+      computed: {
+          converteValue() {
+            if(!this.value) {
+              return 0
+            }
+            return this.value * this.price
+
+          }
+      }
+    })
+  </script>
+</body>
+</html>
