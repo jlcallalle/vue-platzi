@@ -23,3 +23,25 @@ ejm: v-show
       cd platzi-music
       npm install
       npm run dev
+
+# Aprender Vue
+
+## Expresiones y Propiedades
+Una expresión representa el valor de las propiedades de data, se puede usar código js, sumar números, expresiones boolenas, funciones.
+
+``` html
+<h1>{{ msg }}</h1>
+<p>{{ 1 + 1 }}</p>
+<p>{{ 'Hola' + ' Mundo'}}</p>
+<p>{{ true ? 'true' : 'false' }}</p>
+<p>{{ person.name }}</p>
+<p>{{ person.name.toUpperCase() }}</p>
+<p>{{ JSON.stringify(person)}}</p> 
+
+```
+JSON.stringify: parciar valor entero de un objeto a string
+
+
+## Eventos
+v-on:click = @click
+
