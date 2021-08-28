@@ -16,7 +16,6 @@
     <p v-else> {{ 'algo más' }}</p>
     <p v-show="showValue"> {{ value }}</p>
     <h4>v-for</h4>
-    
   </div>
 </template>
 
