@@ -24,14 +24,19 @@ Nueva Versión:
 ## 1.- Expresiones y Propiedades
  Son parametros que ponemos entre llaves y permite representar en pantalla valores de nuestro v-model. 
  Podemos acceder a las propiedades de los objetos y funciones. 
- 
+
 ``` html
 <h1>{{ msg }}</h1>
 <p>{{ 1 + 1 }}</p>
 <p>{{ 'Hola' + ' Mundo'}}</p>
 <p>{{ true ? 'true' : 'false' }}</p>
-<p>{{ person.name }}</p>
+<p>{{ person.name }}</p>****
 <p>{{ person.name.toUpperCase() }}</p>
 <p>{{ JSON.stringify(person)}}</p> 
 
 ```
+## 2.- Directivas
+Marcadores o atributos que agregan a los elementos html para aplicar transformaciones a esos mismos elementos. 
+- v-if, v-else
+- v-show (display:none)
+- v-for

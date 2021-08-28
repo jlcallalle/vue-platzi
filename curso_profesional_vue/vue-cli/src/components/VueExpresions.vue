@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <p>Componente: VueExpresions.vue</p>
+    <!-- <p>Componente: VueExpresions.vue</p> -->
     <h2>Expresiones</h2>
     <p> {{ welcome }}</p>
     <p>{{ 1 + 1 }}</p>
@@ -9,6 +9,14 @@
     <p>{{ person.name }}</p>
     <p>{{ person.name.toUpperCase() }}</p>
     <p>{{ JSON.stringify(person)}}</p> 
+
+    <h2>Directivas</h2>
+    <h4>v-if - v-show</h4>
+    <p v-if="showValue"> {{ value }}</p>
+    <p v-else> {{ 'algo más' }}</p>
+    <p v-show="showValue"> {{ value }}</p>
+    <h4>v-for</h4>
+    
   </div>
 </template>
 
@@ -21,6 +29,13 @@ export default {
       person: {
           name: 'jorge'
       },
+      showValue: false,
+      value : 'algo',
+      todos: [
+        { text: 'Learn JavaScript' },
+        { text: 'Learn Vue' },
+        { text: 'Build something awesome' }
+      ]
     }
   }
 
