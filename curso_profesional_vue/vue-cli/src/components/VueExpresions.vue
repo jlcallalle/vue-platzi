@@ -16,6 +16,20 @@
     <p v-else> {{ 'algo más' }}</p>
     <p v-show="showValue"> {{ value }}</p>
     <h4>v-for</h4>
+
+    <h2>Data Binding</h2>
+    <h4>v-model</h4>
+    <input v-model="valorInput" type="text">
+    <p>{{ valorInput }}</p>
+
+    <h4>v-bind:href, v-bind:title</h4>
+    <!-- <a :href="url">link</a> -->
+    <a v-bind:href="url">link</a>
+    <p v-bind:title="messageTitle">
+      Mueva el mouse sobre mí durante unos segundos
+      para ver mi título enlazado dinámicamente.
+    </p>
+
   </div>
 </template>
 
@@ -34,7 +48,10 @@ export default {
         { text: 'Learn JavaScript' },
         { text: 'Learn Vue' },
         { text: 'Build something awesome' }
-      ]
+      ],
+      valorInput : '',
+      url: 'https://www.google.com/',
+      messageTitle: 'Usted cargó esta página el ' + new Date().toLocaleString(),
     }
   }
 
