@@ -3,17 +3,19 @@
     <!-- <img class="logo-vue" alt="Vue logo" src="./assets/logo.png"> -->
     <HelloWorld msg="Vue CLI template base"/>
     <vueExpresions />
+    <vueIntegra />
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import VueExpresions from './components/VueExpresions.vue'
+import VueIntegra from './components/VueIntegra.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld, VueExpresions
+    HelloWorld, VueExpresions, VueIntegra
   }
 }
 </script>

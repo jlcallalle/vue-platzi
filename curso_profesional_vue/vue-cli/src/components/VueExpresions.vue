@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="container expresions" v-show="mostrarSection">
     <!-- <p>Componente: VueExpresions.vue</p> -->
     <h2>Expresiones</h2>
     <p> {{ welcome }}</p>
@@ -71,6 +71,7 @@ export default {
       messageTitle: 'Usted cargó esta página el ' + new Date().toLocaleString(),
       nombre: '',
       formatoNombre: '',
+      mostrarSection: false,
     }
   },
   computed: {
