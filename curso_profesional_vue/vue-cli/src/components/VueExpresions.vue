@@ -38,6 +38,13 @@
     <h2>Watchers</h2>
     <p>ejemplo consola</p>
 
+    <h2>Eventos</h2>
+    <p>Evento v-on:click</p>
+    <input v-model="nombre" type="text">
+    <!-- <button v-on:click="format">format</button> -->
+    <button @click="format">format</button>
+    <p>{{ formatoNombre }} </p>
+
   </div>
 </template>
 
@@ -62,6 +69,8 @@ export default {
       valorInput : '',
       url: 'https://www.google.com/',
       messageTitle: 'Usted cargó esta página el ' + new Date().toLocaleString(),
+      nombre: '',
+      formatoNombre: '',
     }
   },
   computed: {
@@ -74,6 +83,11 @@ export default {
           console.log(newVal, oldVal);
       }
   },
+  methods: {
+    format() {
+      this.formatoNombre = this.nombre.split(' ').join('-').toUpperCase()
+    },
+  }
 }
 </script>
 

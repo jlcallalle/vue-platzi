@@ -129,3 +129,19 @@ data () {
 
  Se puede usar para llamadas HTTP:
 Un uso comun sería desencadenar una llamada HTTP apartir de que un valor input este modificandose (google), cada vez que se presiona una tecla en el input, puedo reforzar la llamada de la búsqueda.
+
+## Manejo de eventos
+v-on: directiva que sirve para escuchar eventos del DOM, tales como onclick, onmouseover, mouseout, para ejecutar alguna función.
+
+``` html
+<input v-model="nombre" type="text">
+<!-- <button v-on:click="format">format</button> --> Se puede usar el @ como shorthand 
+<button @click="format">format</button>
+<p>{{ formatoNombre }} </p>
+
+methods: {
+  format() {
+    this.formatoNombre = this.nombre.split(' ').join('-').toUpperCase()
+  },
+}
+ ```
