@@ -103,3 +103,29 @@ computed: {
     }
 },
  ```
+
+## 4. Watchers
+
+ Permite ejecutar codigo a partir de que una propiedad de nuestro v-model.
+ no devuelven valor, no son propiedades y no pueden ser usadas en expresiones.
+
+ Se enlazan directamente de alguna propiedad de nuestro v-model por lo que se tiene que llamar de la misma manera. es decir si quiero hacer un watch de la variable 'name', el watch deberia llamarse 'name'.
+
+ Ejemplo: Imprime en console valor antes y despues.
+
+
+``` html
+data () {
+    return {
+      name: '',
+  },
+  watch: {
+      name (newVal, oldVal) {
+          console.log(newVal, oldVal);
+      }
+  },
+ ```
+ Usos Comunes:
+
+ Se puede usar para llamadas HTTP:
+Un uso comun sería desencadenar una llamada HTTP apartir de que un valor input este modificandose (google), cada vez que se presiona una tecla en el input, puedo reforzar la llamada de la búsqueda.

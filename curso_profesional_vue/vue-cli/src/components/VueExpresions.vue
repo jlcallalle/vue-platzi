@@ -35,6 +35,9 @@
     <input v-model="lastname" type="text">
     <p>{{ fullname }}</p>
 
+    <h2>Watchers</h2>
+    <p>ejemplo consola</p>
+
   </div>
 </template>
 
@@ -64,6 +67,11 @@ export default {
   computed: {
       fullname () {
           return `${this.name}  ${this.lastname}`
+      }
+  },
+  watch: {
+      name (newVal, oldVal) {
+          console.log(newVal, oldVal);
       }
   },
 }
