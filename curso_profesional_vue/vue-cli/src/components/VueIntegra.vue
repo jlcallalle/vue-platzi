@@ -29,9 +29,6 @@
         <span v-html="currency.symbol"></span>{{ currency.rate_float}}
         </span>
     </div>
-
-
-
   </div>
 </template>
 
@@ -65,17 +62,10 @@ export default {
   },
   mounted () {
     axios
-      /* .get('https://api.coindesk.com/v1/bpi/currentprice.json')
-      .then(response => (this.info = response)) */
       .get('https://api.coindesk.com/v1/bpi/currentprice.json')
       .then(response => (this.info = response.data.bpi))
+      /* .then(response => (this.info = response)) */
       .catch(error => console.log(error))
-
-    /* fetch('https://jsonplaceholder.typicode.com/users')
-    .then(response => response.json())
-        .then(json => {
-            console.log(json);
-        }) */
   }
 }
 </script>

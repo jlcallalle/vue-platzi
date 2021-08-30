@@ -215,3 +215,9 @@ export permite que el objeto puede ser utilizado.
   
 
  ## Consumir API's REST 
+EndPoint: https://platzi-music-api.herokuapp.com/search?q=muchacha&type=track
+
+Api coincap: 
+https://docs.coincap.io/?version=latest
+https://api.coincap.io/v2/assets
+ttps://api.coincap.io/v2/assets?limit=20
