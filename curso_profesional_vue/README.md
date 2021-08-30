@@ -213,3 +213,5 @@ export default {
 export default configService
 export permite que el objeto puede ser utilizado.
   
+
+ ## Consumir API's REST 

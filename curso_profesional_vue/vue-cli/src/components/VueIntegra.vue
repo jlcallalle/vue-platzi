@@ -18,10 +18,26 @@
             </div>
         </div>
     </section>
+    <br>
+    {{ info }}
+    <br>
+    <br>
+    <h1>Listado de Precio de Bitcoin</h1>
+    <div v-for="currency in info" :key="currency.id">
+        {{ currency.description }}:
+        <span class="lighten">
+        <span v-html="currency.symbol"></span>{{ currency.rate_float}}
+        </span>
+    </div>
+
+
+
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+
 const tracks = [
   { name: 'Muchacha', artist: 'Luis Alberto Spinetta' },
   { name: 'Hoy aca en el baile', artist: 'El Pepo' },
@@ -33,7 +49,8 @@ export default {
   data () {
     return {
       searchQuery: '',
-      tracks: []
+      tracks: [],
+      info: null
     }
   },
   computed: {
@@ -45,6 +62,20 @@ export default {
     search () {
       this.tracks = tracks
     }
+  },
+  mounted () {
+    axios
+      /* .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+      .then(response => (this.info = response)) */
+      .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+      .then(response => (this.info = response.data.bpi))
+      .catch(error => console.log(error))
+
+    /* fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+        .then(json => {
+            console.log(json);
+        }) */
   }
 }
 </script>
