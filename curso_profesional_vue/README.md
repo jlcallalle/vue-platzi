@@ -147,6 +147,7 @@ methods: {
  ```
 
  ## Integracion de Proyecto
+
  VueIntegra.vue
 https://codepen.io/ianaya89/pen/NgEeVO
 
@@ -197,3 +198,18 @@ export default {
     </div>
 </section>
  ```
+
+ ## Servicios: Consumir APIS
+
+ Interactuar con peticiones HTTP ()
+ Se puede integrar con cualquier API pública o privada.
+
+ config.js: almacenamiento
+
+ const configService = {
+    apiUrl: 'https://platzi-music-api.herokuapp.com/'
+  }
+  
+export default configService
+export permite que el objeto puede ser utilizado.
+  
