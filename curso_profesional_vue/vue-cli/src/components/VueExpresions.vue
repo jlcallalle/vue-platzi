@@ -30,6 +30,11 @@
       para ver mi título enlazado dinámicamente.
     </p>
 
+    <h2>Computer Properties</h2>
+    <input v-model="name" type="text"> - 
+    <input v-model="lastname" type="text">
+    <p>{{ fullname }}</p>
+
   </div>
 </template>
 
@@ -38,6 +43,8 @@ export default {
   name: 'VueExpresions',
   data () {
     return {
+      name: '',
+      lastname: '',
       welcome: 'Hola Vue.js',
       person: {
           name: 'jorge'
@@ -53,8 +60,12 @@ export default {
       url: 'https://www.google.com/',
       messageTitle: 'Usted cargó esta página el ' + new Date().toLocaleString(),
     }
-  }
-
+  },
+  computed: {
+      fullname () {
+          return `${this.name}  ${this.lastname}`
+      }
+  },
 }
 </script>
 

@@ -76,3 +76,30 @@ ejemplo: ( v-bind:title="valor", v-bind:href="url")
     }
   }
  ```
+
+
+ Nota:
+
+El v-model v es un two-way binding (enlace bidireccional), lo que significa que si cambia el valor de entrada
+
+El v-bind es one-way binding (enlace unidireccional), lo que significa que enlaza nuestros datos en un sentido.
+También se puede utilizar para vincular atributos HTML.
+
+
+## 3. Computer Properties
+Propiedadades que se calculan a partir de otras propiedades, 
+podemos crear propiedades dinamicas, cuando alguna propiedad cambia su valor.
+Son funciones que devuelven un valor.
+Sirven para generar valores o variables en base a otras propiedades que ya tenemos en el v-model
+
+``` html
+<input v-model="name" type="text"> - 
+<input v-model="lastname" type="text">
+<p>{{ fullname }}</p>
+
+computed: {
+    fullname () {
+        return `${this.name}  ${this.lastname}`
+    }
+},
+ ```
