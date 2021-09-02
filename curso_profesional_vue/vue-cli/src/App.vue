@@ -5,6 +5,8 @@
     <vueExpresions />
     <vueIntegra />
     <vueIntegraFetch />
+    <vuex />
+    
   </div>
 </template>
 
@@ -13,11 +15,12 @@ import HelloWorld from './components/HelloWorld.vue'
 import VueExpresions from './components/VueExpresions.vue'
 import VueIntegra from './components/VueIntegra.vue'
 import VueIntegraFetch from './components/VueIntegraFetch.vue'
+import Vuex from './components/Vuex.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld, VueExpresions, VueIntegra, VueIntegraFetch
+    HelloWorld, VueExpresions, VueIntegra, VueIntegraFetch, Vuex
   }
 }
 </script>

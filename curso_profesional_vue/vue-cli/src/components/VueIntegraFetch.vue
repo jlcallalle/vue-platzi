@@ -1,5 +1,5 @@
 <template>
-  <div class="container integra">
+  <div class="container integra" v-show="mostrarSection">
       <!-- <p>Componente: VueIntegraFetch.vue</p> -->
     <br>
     <h2>Lista Assets</h2>
@@ -15,7 +15,8 @@ export default {
   name: 'VueIntegraFetch',
   data () {
     return {
-      assets: []
+      assets: [],
+      mostrarSection: false,
     }
   },
   created() {

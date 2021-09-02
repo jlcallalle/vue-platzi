@@ -1,5 +1,5 @@
 <template>
-  <div class="container integra">
+  <div class="container integra" v-show="mostrarSection">
       <!-- <p>Componente: VueIntegra.vue</p> -->
       <section class="section">
         <nav class="nav has-shadow">
@@ -47,7 +47,8 @@ export default {
     return {
       searchQuery: '',
       tracks: [],
-      info: null
+      info: null,
+      mostrarSection: false,
     }
   },
   computed: {
